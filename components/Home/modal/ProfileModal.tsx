@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   Flex,
   FormControl,
@@ -10,7 +11,6 @@ import {
   VStack,
 } from "native-base";
 import React from "react";
-import { Platform } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import { NavigationProp, ParamListBase } from "@react-navigation/native";
 
@@ -46,7 +46,7 @@ export default function ProfileModal({
               flex={1}
               bg={"blue.500"}
               onPress={() => {
-                navigation.navigate("Profile"),
+                navigation.navigate("Profile Setting"),
                   inputprops.setModalVisible(false);
               }}
             >
@@ -57,18 +57,21 @@ export default function ProfileModal({
                 alignItems={"center"}
                 space={5}
               >
-                <AntDesign name="profile" size={20} color="white" />
-                <Text fontSize={15} fontWeight={"semibold"} color={"white"}>
-                  Update Profile
-                </Text>
+                <Box width={"1/6"}>
+                  <AntDesign name="profile" size={20} color="white" />
+                </Box>
+                <Box width={"full"}>
+                  <Text fontSize={15} fontWeight={"semibold"} color={"white"}>
+                    Update Profile
+                  </Text>
+                </Box>
               </HStack>
             </Button>
             <Button
               flex={1}
               bg={"blue.500"}
               onPress={() => {
-                navigation.navigate("Profile"),
-                  inputprops.setModalVisible(false);
+                navigation.navigate("Login"), inputprops.setModalVisible(false);
               }}
             >
               <HStack
@@ -78,10 +81,14 @@ export default function ProfileModal({
                 flexDir={"row"}
                 alignItems={"center"}
               >
-                <AntDesign name="logout" size={20} color="white" />
-                <Text fontSize={15} fontWeight={"semibold"} color={"white"}>
-                  Logout
-                </Text>
+                <Box width={"1/6"}>
+                  <AntDesign name="logout" size={20} color="white" />
+                </Box>
+                <Box width={"full"}>
+                  <Text fontSize={15} fontWeight={"semibold"} color={"white"}>
+                    Logout
+                  </Text>
+                </Box>
               </HStack>
             </Button>
           </VStack>

@@ -1,13 +1,60 @@
-import { Box, Divider, ScrollView, Text, VStack, View } from "native-base";
+import {
+  AlertDialog,
+  Box,
+  Divider,
+  FlatList,
+  ScrollView,
+  Text,
+  VStack,
+  View,
+} from "native-base";
 import Usage from "../components/Usage";
-import { useWindowDimensions } from "react-native";
+import { Alert, useWindowDimensions } from "react-native";
 import SortMenu from "../components/SortMenu";
+import UsageInputModal from "../components/Home/modal/UsageInputModal";
+import React, {
+  Suspense,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 
-export default function UsageHistory() {
+function UsageHistory() {
   const dimension = useWindowDimensions();
+  const [usagemodalvisible, setusagemodalvisible] = useState(false);
+  const initialref = useRef(null);
+  const finalref = useRef(null);
+  const [data, setdata] = useState([]);
+  const renderitem = ({ item }) => (
+    <Usage
+      setusagemodalvisible={setusagemodalvisible}
+      mode="edit"
+      type="Food"
+    />
+  );
+  const keyExtractor = useCallback((item) => item.id, [data]);
+  const getdata = async () => {
+    //fetch data from api
+    const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+    const data = await res.json();
+    setdata(data);
+  };
+  useEffect(() => {
+    getdata();
+  }, []);
   return (
     <View bg={"white"} flex={1}>
-      <Box
+      <UsageInputModal
+        inputprops={{
+          ModalVisible: usagemodalvisible,
+          setModalVisible: setusagemodalvisible,
+          initialRef: initialref,
+          finalRef: finalref,
+        }}
+      />
+      {/* <Box
         justifyContent={"center"}
         justifyItems={"center"}
         marginX={"auto"}
@@ -20,36 +67,19 @@ export default function UsageHistory() {
         >
           Usage History
         </Text>
-      </Box>
-      <Divider />
+      </Box> */}
       <SortMenu />
-      <Divider />
-      <ScrollView
+      <FlatList
+        contentContainerStyle={{ paddingVertical: 15 }}
         bg={"white"}
-        paddingX={dimension.width > 450 ? 10 : 5}
         justifyItems={"center"}
-      >
-        <VStack space={7} paddingY={5}>
-          <Usage />
-          <Usage />
-          <Usage />
-          <Usage />
-          <Usage />
-          <Usage />
-          <Usage />
-          <Usage />
-          <Usage />
-          <Usage />
-          <Usage />
-          <Usage />
-          <Usage />
-          <Usage />
-          <Usage />
-          <Usage />
-          <Usage />
-          <Usage />
-        </VStack>
-      </ScrollView>
+        paddingX={dimension.width > 450 ? 10 : 5}
+        data={data}
+        renderItem={renderitem}
+        keyExtractor={keyExtractor}
+        ItemSeparatorComponent={() => <View height={7} />}
+      />
     </View>
   );
 }
+export default React.memo(UsageHistory);
