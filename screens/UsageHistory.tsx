@@ -38,20 +38,6 @@ function UsageHistory() {
           finalRef: finalref,
         }}
       />
-      {/* <Box
-        justifyContent={"center"}
-        justifyItems={"center"}
-        marginX={"auto"}
-        paddingY={3}
-      >
-        <Text
-          color={"blue.500"}
-          fontSize={dimension.width > 450 ? 15 : 20}
-          fontWeight={"semibold"}
-        >
-          Usage History
-        </Text>
-      </Box> */}
       <SortMenu />
       <FlatList
         contentContainerStyle={{ paddingVertical: 15 }}

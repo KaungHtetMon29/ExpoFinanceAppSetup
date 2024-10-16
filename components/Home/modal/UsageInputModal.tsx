@@ -37,6 +37,7 @@ export default function UsageInputModal({
 
   return (
     <Modal
+      animationPreset="slide"
       isOpen={inputprops.ModalVisible}
       onClose={() => inputprops.setModalVisible(false)}
       initialFocusRef={inputprops.initialRef}

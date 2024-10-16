@@ -47,15 +47,13 @@ export default function ProfileSetting({
             </VStack>
           </HStack>
         </ProfileSettingContainer>
-        <ProfileSettingContainer>
-          <VStack
-            space={width > 360 ? (width > 390 ? (width > 412 ? 8 : 7) : 5) : 4}
-          >
+        <ProfileSettingContainer flex={0.47}>
+          <VStack justifyContent={"space-between"} flex={1}>
             <Text
               fontSize={"lg"}
               fontWeight={"bold"}
               paddingBottom={
-                width > 360 ? (width > 390 ? (width > 412 ? 3 : 1) : 0.7) : 0.5
+                width > 360 ? (width > 390 ? (width > 412 ? 2 : 1) : 0.7) : 0.5
               }
               opacity={0.7}
             >
@@ -96,10 +94,8 @@ export default function ProfileSetting({
             />
           </VStack>
         </ProfileSettingContainer>
-        <ProfileSettingContainer>
-          <VStack
-            space={width > 360 ? (width > 390 ? (width > 412 ? 8 : 7) : 5) : 4}
-          >
+        <ProfileSettingContainer flex={0.47}>
+          <VStack flex={1} justifyContent={"space-between"}>
             <Text
               fontSize={"lg"}
               fontWeight={"bold"}

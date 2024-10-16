@@ -10,13 +10,14 @@ export default function BalanceInput({
 
   return (
     <Modal
+      animationPreset="slide"
       isOpen={inputprops.ModalVisible}
       onClose={() => inputprops.setModalVisible(false)}
       initialFocusRef={inputprops.initialRef}
       finalFocusRef={inputprops.finalRef}
     >
       <Modal.Content>
-        {/* <Modal.CloseButton /> */}
+        <Modal.CloseButton />
         <Modal.Header>Enter Your Salary</Modal.Header>
         <Modal.Body>
           <FormControl>

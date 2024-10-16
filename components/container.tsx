@@ -12,6 +12,7 @@ export default function Container({
   const dimension = useWindowDimensions();
   return (
     <ScrollView
+      flex={1}
       contentContainerStyle={{ flexGrow: 1 }}
       paddingTop={dimension.width > 450 ? 10 : 5}
       paddingX={dimension.width > 450 ? 10 : 5}

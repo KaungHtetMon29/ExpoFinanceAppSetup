@@ -9,6 +9,7 @@ export default function SortMenu() {
       paddingX={dimension.width > 450 ? 10 : 5}
       paddingY={3}
       flexDir={"row"}
+      width={"container"}
       justifyContent={"space-between"}
       bg={"blue.500"}
     >
@@ -17,7 +18,7 @@ export default function SortMenu() {
       </Text>
       <Menu
         bg={"white"}
-        w={"full"}
+        width={"full"}
         trigger={(triggerProps) => {
           return (
             <Pressable {...triggerProps}>

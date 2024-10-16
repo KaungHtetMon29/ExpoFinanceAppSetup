@@ -1,20 +1,21 @@
 import React from "react";
 import { Box } from "native-base";
-import { useWindowDimensions } from "react-native";
 
 export default function ProfileSettingContainer({
   children,
+  flex,
 }: {
   children: React.ReactNode;
+  flex?: number;
 }) {
-  const { width } = useWindowDimensions();
   return (
     <Box
       shadow={1}
       rounded={"xl"}
-      paddingX={4}
-      paddingY={width > 360 ? (width > 390 ? (width > 412 ? 8 : 5) : 4) : 3}
+      paddingX={5}
+      paddingY={6}
       background={"white"}
+      flex={flex}
     >
       {children}
     </Box>

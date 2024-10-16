@@ -13,7 +13,7 @@ export default function Profile({
     setshow(true);
   }, 3000);
   return (
-    <Box>
+    <Box flex={1}>
       <Flex
         direction="row"
         justifyContent={"space-between"}

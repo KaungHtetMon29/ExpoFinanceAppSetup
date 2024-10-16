@@ -33,23 +33,7 @@ export default function MyStack() {
           headerShown: false,
         }}
       />
-      <Stack.Screen
-        name="UsageHistory"
-        component={UsageHistory}
-        // options={{
-        //   transitionSpec: {
-        //     open: {
-        //       animation: "spring",
-        //       config: {
-        //         mass: 0.1,
-        //         stiffness: 500,
-        //         damping: 100,
-        //       },
-        //     },
-        //     close: { animation: "timing", config: { duration: 0.1 } },
-        //   },
-        // }}
-      />
+      <Stack.Screen name="UsageHistory" component={UsageHistory} />
       <Stack.Screen name="BalanceInput" component={BalanceInputHistory} />
       <Stack.Screen name="Profile Setting" component={ProfileSettingPage} />
       <Stack.Screen name="EDIT PROFILE" component={EditProfile} />
