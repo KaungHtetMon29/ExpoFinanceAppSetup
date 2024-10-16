@@ -1,3 +1,4 @@
+import React from "react";
 import { HStack, Switch, Text, VStack } from "native-base";
 import { useState } from "react";
 

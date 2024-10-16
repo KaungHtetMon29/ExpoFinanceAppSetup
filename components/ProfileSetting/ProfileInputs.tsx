@@ -1,3 +1,4 @@
+import React from "react";
 import { Box, Input, Text } from "native-base";
 
 export default function ProfileInputs({ Lablename }: { Lablename: string }) {

@@ -1,15 +1,4 @@
-import {
-  Box,
-  Button,
-  Flex,
-  FormControl,
-  HStack,
-  Input,
-  KeyboardAvoidingView,
-  Modal,
-  Text,
-  VStack,
-} from "native-base";
+import { Box, Button, HStack, Modal, Text, VStack } from "native-base";
 import React from "react";
 import { AntDesign } from "@expo/vector-icons";
 import { NavigationProp, ParamListBase } from "@react-navigation/native";
@@ -21,8 +10,6 @@ export default function ProfileModal({
   inputprops: Inputprops;
   navigation: NavigationProp<ParamListBase>;
 }) {
-  const onfocus = { borderColor: "blue.500", bg: "blue.100" };
-
   return (
     <Modal
       isOpen={inputprops.ModalVisible}
@@ -46,8 +33,8 @@ export default function ProfileModal({
               flex={1}
               bg={"blue.500"}
               onPress={() => {
-                navigation.navigate("Profile Setting"),
-                  inputprops.setModalVisible(false);
+                navigation.navigate("Profile Setting");
+                inputprops.setModalVisible(false);
               }}
             >
               <HStack
@@ -71,7 +58,8 @@ export default function ProfileModal({
               flex={1}
               bg={"blue.500"}
               onPress={() => {
-                navigation.navigate("Login"), inputprops.setModalVisible(false);
+                navigation.navigate("Login");
+                inputprops.setModalVisible(false);
               }}
             >
               <HStack
@@ -132,6 +120,6 @@ export default function ProfileModal({
 interface Inputprops {
   ModalVisible: boolean;
   setModalVisible: React.Dispatch<React.SetStateAction<boolean>>;
-  initialRef: React.RefObject<any>;
-  finalRef: React.RefObject<any>;
+  initialRef: React.RefObject<unknown>;
+  finalRef: React.RefObject<unknown>;
 }

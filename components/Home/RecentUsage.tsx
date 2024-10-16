@@ -1,3 +1,4 @@
+import React from "react";
 import { NavigationProp, ParamListBase } from "@react-navigation/native";
 import { Box, HStack, Text, VStack } from "native-base";
 import { Pressable, useWindowDimensions } from "react-native";

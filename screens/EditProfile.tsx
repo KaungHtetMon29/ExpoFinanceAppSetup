@@ -1,17 +1,6 @@
-import {
-  Box,
-  Button,
-  Image,
-  KeyboardAvoidingView,
-  Text,
-  View,
-  VStack,
-} from "native-base";
-import Container from "../components/container";
-import { Platform, Pressable } from "react-native";
-import ProfileInputs from "../components/ProfileSetting/ProfileInputs";
-import { lazy, Suspense, useState } from "react";
-import ProfileImage from "../components/EditProfile/ProfileImage";
+import React from "react";
+import { Text, View } from "native-base";
+import { lazy, Suspense } from "react";
 
 export default function EditProfile() {
   const LazyEditProfile = lazy(

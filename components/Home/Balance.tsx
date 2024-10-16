@@ -1,7 +1,7 @@
-import { Box, Button, HStack, Text, VStack } from "native-base";
-import { AntDesign } from "@expo/vector-icons";
+import React from "react";
+import { Box, HStack, Text, VStack } from "native-base";
 import { Pressable, useWindowDimensions } from "react-native";
-import { NavigationProp, ParamListBase } from "@react-navigation/native";
+import { NavigationProp } from "@react-navigation/native";
 import { FontAwesome5, FontAwesome } from "@expo/vector-icons";
 import { PageTypes } from "../../navigation/Pagetypes";
 export default function Balance({

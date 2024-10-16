@@ -1,11 +1,11 @@
+import React from "react";
 import { Box, FlatList, Text } from "native-base";
 import { useEffect, useState } from "react";
-import { View, useWindowDimensions } from "react-native";
+import { View } from "react-native";
 
 export default function BalanceInputHistory() {
   const [data, setdata] = useState([]);
 
-  const dimension = useWindowDimensions();
   const getdata = async () => {
     //fetch data from api
     const res = await fetch("https://jsonplaceholder.typicode.com/posts");
@@ -33,7 +33,7 @@ export default function BalanceInputHistory() {
       </Box>
       <FlatList
         data={data}
-        renderItem={(item) => <Text>test</Text>}
+        renderItem={() => <Text>test</Text>}
         keyExtractor={(i) => i.id}
       ></FlatList>
     </View>

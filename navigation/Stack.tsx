@@ -1,10 +1,9 @@
+import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import Home from "../screens/Home";
-import Home2 from "../screens/Test";
 import UsageHistory from "../screens/UsageHistory";
 import BalanceInputHistory from "../screens/BalanceInputHistory";
 import Login from "../screens/Login";
-import ProfileSetting from "../screens/ProfileSetting";
 import EditProfile from "../screens/EditProfile";
 import NotificationSetting from "../screens/NotificationSetting";
 import TermOfUse from "../screens/TermOfUse";

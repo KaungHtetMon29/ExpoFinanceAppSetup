@@ -1,4 +1,5 @@
-import { Button, FormControl, Input, Modal, Text } from "native-base";
+import React from "react";
+import { Button, FormControl, Input, Modal } from "native-base";
 
 export default function ChangePw({
   isOpen,

@@ -1,27 +1,13 @@
-import {
-  Box,
-  Button,
-  Flex,
-  HStack,
-  Icon,
-  KeyboardAvoidingView,
-  Modal,
-  MoonIcon,
-  ScrollView,
-  Text,
-  VStack,
-  View,
-} from "native-base";
-import { Platform, SafeAreaViewBase, useWindowDimensions } from "react-native";
+import React from "react";
+import { Button, KeyboardAvoidingView, Text, VStack, View } from "native-base";
+import { Platform, useWindowDimensions } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import Balance from "../components/Home/Balance";
 import UsageGraph from "../components/Home/UsageGraph";
 import RecentUsage from "../components/Home/RecentUsage";
-import { NavigationProp, ParamListBase } from "@react-navigation/native";
 import BalanceInput from "../components/Home/modal/Balanceinput";
-import { lazy, Suspense, useRef, useState } from "react";
+import { Suspense, useRef, useState } from "react";
 import Profile from "../components/Home/Profile";
-import ProfileModal from "../components/Home/modal/ProfileModal";
 import UsageInputModal from "../components/Home/modal/UsageInputModal";
 import { localPageTypes } from "../navigation/Pagetypes";
 import Container from "../components/container";
@@ -29,7 +15,6 @@ import { SafeAreaView } from "react-native-safe-area-context";
 function Home({ navigation }: { navigation: localPageTypes }) {
   const dimension = useWindowDimensions();
   const [ModalVisible, setModalVisible] = useState(false);
-  const [PfModalVisible, setPfModalVisible] = useState(false);
   const [UsageModalVisible, setUsageModalVisible] = useState(false);
   const initialRef = useRef(null);
   const finalRef = useRef(null);

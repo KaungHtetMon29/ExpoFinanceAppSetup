@@ -1,21 +1,22 @@
-import navigation from "@react-navigation/native";
+import React from "react";
 import {
   Button,
   HStack,
   KeyboardAvoidingView,
-  ScrollView,
   Text,
-  View,
   VStack,
 } from "native-base";
-import { Platform, useWindowDimensions } from "react-native";
+import { Platform } from "react-native";
 import Container from "../components/container";
 import { AntDesign } from "@expo/vector-icons";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { StackNavigationHelpers } from "@react-navigation/stack/lib/typescript/src/types";
 
-export default function Login({ navigation }) {
-  const dimension = useWindowDimensions();
-
+export default function Login({
+  navigation,
+}: {
+  navigation: StackNavigationHelpers;
+}) {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <KeyboardAvoidingView

@@ -1,5 +1,4 @@
 import { Box, Flex, Image, Text, VStack } from "native-base";
-import { AntDesign } from "@expo/vector-icons";
 import { Pressable, useWindowDimensions } from "react-native";
 import React, { useState } from "react";
 import { NavigationProp, ParamListBase } from "@react-navigation/native";

@@ -1,21 +1,19 @@
-import {
-  Box,
-  HStack,
-  Image,
-  ScrollView,
-  Text,
-  View,
-  VStack,
-} from "native-base";
+import React from "react";
+import { HStack, Image, ScrollView, Text, VStack } from "native-base";
 import ProfileSettingContainer from "../components/ProfileSetting/ProfileSettingContainer";
-import { Pressable, useWindowDimensions } from "react-native";
+import { useWindowDimensions } from "react-native";
 import ProfileSettingButton from "../components/ProfileSetting/ProfileSettingButton";
 import { AntDesign } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import ChangePw from "../components/EditProfile/ChangePw";
 import { useState } from "react";
+import { StackNavigationHelpers } from "@react-navigation/stack/lib/typescript/src/types";
 
-export default function ProfileSetting({ navigation }) {
+export default function ProfileSetting({
+  navigation,
+}: {
+  navigation: StackNavigationHelpers;
+}) {
   const { width, height } = useWindowDimensions();
   const [changPw, setChangePw] = useState(false);
   return (

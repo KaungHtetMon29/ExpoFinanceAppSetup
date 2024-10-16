@@ -1,17 +1,9 @@
-import {
-  HStack,
-  KeyboardAvoidingView,
-  Switch,
-  Text,
-  View,
-  VStack,
-} from "native-base";
+import React from "react";
+import { KeyboardAvoidingView, VStack } from "native-base";
 import Container from "../components/container";
-import { useState } from "react";
 import NotiSetting from "../components/NotiSetting/NotiSetting";
 
 export default function NotificationSetting() {
-  const [enabled, setenabled] = useState(false);
   return (
     <KeyboardAvoidingView flex={1}>
       <Container bg={"gray.200"}>

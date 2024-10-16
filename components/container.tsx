@@ -1,12 +1,12 @@
+import React from "react";
 import { ScrollView } from "native-base";
 import { useWindowDimensions } from "react-native";
 
 export default function Container({
   children,
   bg = "white",
-  ...props
 }: {
-  children: any;
+  children: React.ReactNode;
   bg?: string;
 }) {
   const dimension = useWindowDimensions();

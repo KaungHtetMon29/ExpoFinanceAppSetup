@@ -1,7 +1,8 @@
-import { Box, HStack, Pressable, Text, VStack } from "native-base";
+import React from "react";
+import { HStack, Pressable, Text, VStack } from "native-base";
 import { MaterialIcons } from "@expo/vector-icons";
 import { ReactElement } from "react";
-import { NavigationProp, ParamListBase } from "@react-navigation/native";
+import { StackNavigationHelpers } from "@react-navigation/stack/lib/typescript/src/types";
 export default function ProfileSettingButton({
   pageName,
   name = pageName,
@@ -15,7 +16,7 @@ export default function ProfileSettingButton({
   pageName: string;
   instruction?: string;
   icon: ReactElement;
-  navigation: NavigationProp<ParamListBase>;
+  navigation: StackNavigationHelpers;
   name?: string;
   onPress?: () => void;
 }) {

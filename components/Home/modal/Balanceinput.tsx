@@ -1,12 +1,5 @@
-import {
-  Button,
-  FormControl,
-  Input,
-  KeyboardAvoidingView,
-  Modal,
-} from "native-base";
+import { Button, FormControl, Input, Modal } from "native-base";
 import React from "react";
-import { Platform } from "react-native";
 
 export default function BalanceInput({
   inputprops,
@@ -65,6 +58,6 @@ export default function BalanceInput({
 interface Inputprops {
   ModalVisible: boolean;
   setModalVisible: React.Dispatch<React.SetStateAction<boolean>>;
-  initialRef: React.RefObject<any>;
-  finalRef: React.RefObject<any>;
+  initialRef: React.RefObject<unknown>;
+  finalRef: React.RefObject<unknown>;
 }

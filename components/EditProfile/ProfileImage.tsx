@@ -1,3 +1,4 @@
+import React from "react";
 import { Box, Image, Pressable } from "native-base";
 import { AntDesign } from "@expo/vector-icons";
 export default function ProfileImage() {

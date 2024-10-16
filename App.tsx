@@ -1,15 +1,11 @@
 import "react-native-gesture-handler";
 import { NavigationContainer } from "@react-navigation/native";
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import MyStack from "./navigation/Stack";
-import { extendTheme, NativeBaseProvider, Text, View } from "native-base";
-import { SafeAreaView } from "react-native-safe-area-context";
-import { useWindowDimensions } from "react-native";
-import * as Font from "expo-font";
+import { extendTheme, NativeBaseProvider, View } from "native-base";
 
 export default function App() {
-  const dimension = useWindowDimensions();
   const theme = extendTheme({
     colors: {
       custombtn: {

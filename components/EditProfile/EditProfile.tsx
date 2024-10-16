@@ -1,15 +1,8 @@
-import {
-  Box,
-  Button,
-  Image,
-  KeyboardAvoidingView,
-  Text,
-  VStack,
-} from "native-base";
+import React from "react";
+import { Button, KeyboardAvoidingView, Text, VStack } from "native-base";
 
-import { Platform, Pressable } from "react-native";
+import { Pressable } from "react-native";
 
-import { useState } from "react";
 import Container from "../container";
 import ProfileImage from "./ProfileImage";
 import ProfileInputs from "../ProfileSetting/ProfileInputs";

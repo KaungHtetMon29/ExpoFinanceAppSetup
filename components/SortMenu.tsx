@@ -1,4 +1,5 @@
-import { Box, Flex, Menu, Text, View } from "native-base";
+import React from "react";
+import { Flex, Menu, Text } from "native-base";
 import { Pressable, useWindowDimensions } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 export default function SortMenu() {

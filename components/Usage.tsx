@@ -1,5 +1,5 @@
-import { Box, Flex, HStack, Text, VStack } from "native-base";
-import { Pressable, View, useWindowDimensions } from "react-native";
+import { Box, Flex, HStack, Text } from "native-base";
+import { Pressable, useWindowDimensions } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import React from "react";
 import { FontAwesome6 } from "@expo/vector-icons";

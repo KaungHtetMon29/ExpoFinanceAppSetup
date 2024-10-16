@@ -1,3 +1,4 @@
+import React from "react";
 import { Box, Flex, HStack, Text } from "native-base";
 import { useWindowDimensions } from "react-native";
 import { PieChart } from "react-native-chart-kit";

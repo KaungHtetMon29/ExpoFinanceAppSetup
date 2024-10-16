@@ -1,21 +1,9 @@
-import {
-  Button,
-  CheckIcon,
-  FormControl,
-  Input,
-  KeyboardAvoidingView,
-  Menu,
-  Modal,
-  Select,
-} from "native-base";
+import { Button, FormControl, Input, Modal, Select } from "native-base";
 import React from "react";
-import { Platform } from "react-native";
 import { Categories } from "../../../types/Categories";
-import { isEnabled } from "react-native/Libraries/Performance/Systrace";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
-import { MaterialIcons } from "@expo/vector-icons";
 
 export default function UsageInputModal({
   inputprops,
@@ -23,9 +11,8 @@ export default function UsageInputModal({
   inputprops: Inputprops;
 }) {
   const onfocus = { borderColor: "blue.500", bg: "blue.100" };
-  const [shouldOverlapWithTrigger] = React.useState(false);
   const [position, setPosition] = React.useState("");
-  let cat: Categories[] = [
+  const cat: Categories[] = [
     {
       name: "Clothing",
       icon: <FontAwesome5 name="tshirt" size={20} color="black" />,
@@ -136,6 +123,6 @@ export default function UsageInputModal({
 interface Inputprops {
   ModalVisible: boolean;
   setModalVisible: React.Dispatch<React.SetStateAction<boolean>>;
-  initialRef: React.RefObject<any>;
-  finalRef: React.RefObject<any>;
+  initialRef: React.RefObject<unknown>;
+  finalRef: React.RefObject<unknown>;
 }

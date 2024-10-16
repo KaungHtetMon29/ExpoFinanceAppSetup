@@ -1,25 +1,9 @@
-import {
-  AlertDialog,
-  Box,
-  Divider,
-  FlatList,
-  ScrollView,
-  Text,
-  VStack,
-  View,
-} from "native-base";
+import { FlatList, View } from "native-base";
 import Usage from "../components/Usage";
-import { Alert, useWindowDimensions } from "react-native";
+import { useWindowDimensions } from "react-native";
 import SortMenu from "../components/SortMenu";
 import UsageInputModal from "../components/Home/modal/UsageInputModal";
-import React, {
-  Suspense,
-  useCallback,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 
 function UsageHistory() {
   const dimension = useWindowDimensions();
@@ -27,7 +11,7 @@ function UsageHistory() {
   const initialref = useRef(null);
   const finalref = useRef(null);
   const [data, setdata] = useState([]);
-  const renderitem = ({ item }) => (
+  const renderitem = () => (
     <Usage
       setusagemodalvisible={setusagemodalvisible}
       mode="edit"

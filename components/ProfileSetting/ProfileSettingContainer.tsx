@@ -1,8 +1,13 @@
+import React from "react";
 import { Box } from "native-base";
 import { useWindowDimensions } from "react-native";
 
-export default function ProfileSettingContainer({ children, ...props }) {
-  const { width, height } = useWindowDimensions();
+export default function ProfileSettingContainer({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const { width } = useWindowDimensions();
   return (
     <Box
       shadow={1}
