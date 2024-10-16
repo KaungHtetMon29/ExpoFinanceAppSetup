@@ -8,6 +8,7 @@ import EditProfile from "../screens/EditProfile";
 import NotificationSetting from "../screens/NotificationSetting";
 import TermOfUse from "../screens/TermOfUse";
 import ProfileSettingPage from "../screens/ProfileSettingPage";
+import RecurringPayment from "../screens/RecurringPayment";
 
 const Stack = createStackNavigator();
 export default function MyStack() {
@@ -35,6 +36,7 @@ export default function MyStack() {
       />
       <Stack.Screen name="UsageHistory" component={UsageHistory} />
       <Stack.Screen name="BalanceInput" component={BalanceInputHistory} />
+      <Stack.Screen name="RecurringPayment" component={RecurringPayment} />
       <Stack.Screen name="Profile Setting" component={ProfileSettingPage} />
       <Stack.Screen name="EDIT PROFILE" component={EditProfile} />
       <Stack.Screen name="NOTIFICATION" component={NotificationSetting} />

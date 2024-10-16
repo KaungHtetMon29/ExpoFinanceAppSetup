@@ -47,7 +47,7 @@ function Home({ navigation }: { navigation: localPageTypes }) {
                 <View height={dimension.height / 14}>
                   <Profile navigation={navigation} />
                 </View>
-                <View height={(dimension.height / 10) * 1.5}>
+                <View height={(dimension.height / 10.8) * 1.5}>
                   <Balance
                     navigation={navigation}
                     setModalVisible={setModalVisible}

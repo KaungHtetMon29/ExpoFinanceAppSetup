@@ -59,7 +59,7 @@ export default function Balance({
                 color="white"
               />
             </Pressable>
-            <Pressable onPress={() => navigation.navigate("BalanceInput")}>
+            <Pressable onPress={() => navigation.navigate("RecurringPayment")}>
               <MaterialIcons
                 name="payment"
                 size={dimension.fontScale * 37}
